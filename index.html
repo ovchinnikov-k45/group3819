@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Флексы</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Стиль body */
+body {
+    font-family: Arial;
+    margin: 0;
+}
+
+/* Заголовок хедера/лого */
+.header {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+/* Стиль для навигации */
+.navbar {
+    display: flex;
+    background-color: #333;
+}
+
+/* Стиль для навигационных ссылок */
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Смена цвета при наведении */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Контейнер для колонок */
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Создаем 2 неодинаковых столбца рядом друг с другом */
+/* Левая колонка */
+.side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Главная колонка */
+.main {
+    flex: 70%;
+    background-color: white;
+    padding: 20px;
+}
+
+/* Типо картинка, для примера */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Стиль подвал */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+}
+
+/* Адаптивный макет - при ширине экрана менее 700 пикселей распологает два столбца друг над другом, а не рядом друг с другом. */
+@media screen and (max-width: 700px) {
+    .row, .navbar {   
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Подсказка -->
+<div style="background:yellow;padding:5px">
+  <h4 style="text-align:center">Измените размер окна браузера, чтобы увидеть эффект.</h4>
+</div>
+
+<!-- Хедер -->
+<div class="header">
+  <h1>Демонстрация</h1>
+  <p>С <b>флексовыми</b> Оболочками</p>
+</div>
+
+<!-- Навигация -->
+<div class="navbar">
+  <a href="#">Ссылка</a>
+  <a href="#">Ссылка</a>
+  <a href="#">Ссылка</a>
+  <a href="#">Ссылка</a>
+</div>
+
+<!-- Флексирующий контент -->
+<div class="row">
+  <div class="side">
+      <h2>Про меня</h2>
+      <h5>Фото:</h5>
+      <div class="fakeimg" style="height:200px;">Картинка</div>
+      <p>Какой то текст in culpa qui officia deserunt mollit anim..</p>
+      <h3>Еще какой то текст</h3>
+      <p>Lorem ipsum dolor sit ame.</p>
+      <div class="fakeimg" style="height:60px;">Картинка</div><br>
+      <div class="fakeimg" style="height:60px;">Картинка</div><br>
+      <div class="fakeimg" style="height:60px;">Картинка</div>
+  </div>
+  <div class="main">
+      <h2>ЗАГОЛОВОК</h2>
+      <h5>Описание заголовка, 12.10.2020</h5>
+      <div class="fakeimg" style="height:200px;">Картинка</div>
+      <p>Какой то текст...</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+      <br>
+      <h2>ЗАГОЛОВОК</h2>
+      <h5>Описание заголовка, 12.10.2020</h5>
+      <div class="fakeimg" style="height:200px;">Картинка</div>
+      <p>Какой то текст...</p>
+      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<!-- Подвал -->
+<div class="footer">
+  <h2>Подвал</h2>
+</div>
+
+</body>
+</html>
